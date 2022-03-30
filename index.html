@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header {
+            text-align: center;
+
+
+        }
+
+        .p1 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 20px;
+        }
+
+        .mid {
+            text-align: center;
+        }
+
+        #num1 {
+            margin: 20px;
+        }
+
+        #num2 {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Arithmetic Operation</h1>
+
+    </header>
+    <hr color="red">
+    <main>
+        <div class="mid">
+            <b>
+                <p class="p1"> Enter a number in each test box</p>
+            </b>
+            Number1:<input type="text" id="num1">
+            <br>
+            Number2:<input type="text" id="num2">
+            <br>
+            <button id="add">Add</button>
+            <button id="sub">Substract</button>
+            <button id="mul">Multiply</button>
+            <button id="div">Divide</button>
+
+            <br><br>
+            Result is: <input type="text" id="res">
+        </div>
+
+    </main>
+    <script>
+
+        var add = document.getElementById("add");
+        var sub = document.getElementById("sub");
+        var mul = document.getElementById("mul");
+        var div = document.getElementById("div");
+        var res = document.getElementById("res");
+        console.log(num1);
+
+        function addi() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+
+            var num3 = num1 + num2;
+            
+            res.value = num3;
+        }
+        function suni() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+
+            var num3 =num2-num1;
+            
+            res.value = num3;
+        }
+        function mulp() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+
+            var num3 = num1 * num2;
+            res.value = num3;
+        }
+        function divd() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+
+            var num3 = num1 / num2;
+
+            res.value = num3;
+        }
+        add.addEventListener("click", addi);
+        sub.addEventListener("click", suni);
+        mul.addEventListener("click", mulp);
+        div.addEventListener("click", divd);
+
+
+    </script>
+</body>
+
+</html>
